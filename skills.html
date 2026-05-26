@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kashmir — Skills</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/jpg" href="favicon.jpg">
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">KP</a>
+    <ul class="nav-links">
+      <li><a href="index.html">About</a></li>
+      <li><a href="skills.html" class="active">Skills</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="reel.html">Reel</a></li>
+      <li><a href="contact.html" class="nav-cta">Hire Me</a></li>
+    </ul>
+    <button class="burger" id="burger">&#9776;</button>
+  </nav>
+
+  <div class="drawer" id="drawer">
+    <ul>
+      <li><a href="index.html"   onclick="closeDrawer()">About</a></li>
+      <li><a href="skills.html"  onclick="closeDrawer()">Skills</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="reel.html"    onclick="closeDrawer()">Reel</a></li>
+      <li><a href="contact.html" onclick="closeDrawer()">Hire Me</a></li>
+    </ul>
+  </div>
+
+  <div class="page">
+    <div class="page-header fade-in">
+      <p class="section-tag">What I Do</p>
+      <h2>Skills &amp; <em>Expertise</em></h2>
+    </div>
+
+    <div class="skills-body">
+
+      <div class="skill-row fade-in">
+        <span class="skill-num">01</span>
+        <span class="skill-name">Multimedia Arts</span>
+        <ul class="skill-items">
+          <li>Technical Editing Skills</li>
+          <li>Visual & Creative Skills</li>
+          <li>Visual Storytelling</li>
+        </ul>
+      </div>
+
+      <div class="skill-row fade-in">
+        <span class="skill-num">02</span>
+        <span class="skill-name">PC Hardware</span>
+        <ul class="skill-items">
+          <li>Custom PC Builds</li>
+          <li>PC Maintenance</li>
+          <li>Cable Management</li>
+        </ul>
+      </div>
+
+      <div class="skill-row fade-in">
+        <span class="skill-num">03</span>
+        <span class="skill-name">Online Buying &amp; Selling</span>
+        <ul class="skill-items">
+          <li>E-commerce Operations</li>
+          <li>Marketplace &amp; Product Sourcing</li>
+          <li>Customer &amp; Client Relations</li>
+        </ul>
+      </div>
+
+      <div class="skill-row fade-in">
+        <span class="skill-num">04</span>
+        <span class="skill-name">Java Programming/Basic Lua Scripting</span>
+        <ul class="skill-items">
+          <li>Game Logic &amp; Mechanics</li>
+          <li>Scripting &amp; Automation</li>
+          <li>Troubleshooting &amp; Debugging</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <footer class="footer">
+      <span>© 2026 Kashmir</span>
+    </footer>
+  </div>
+
+  <script>
+    const burger = document.getElementById('burger');
+    const drawer = document.getElementById('drawer');
+    burger.addEventListener('click', () => drawer.classList.toggle('open'));
+    function closeDrawer() { drawer.classList.remove('open'); }
+
+    // Staggered fade-in
+    document.querySelectorAll('.fade-in').forEach((el, i) => {
+      setTimeout(() => el.classList.add('visible'), 80 + i * 120);
+    });
+  </script>
+</body>
+</html>

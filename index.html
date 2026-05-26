@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kashmir — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/jpg" href="favicon.jpg">
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">KP</a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">About</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="reel.html">Reel</a></li>
+      <li><a href="contact.html" class="nav-cta">Hire Me</a></li>
+    </ul>
+    <button class="burger" id="burger">&#9776;</button>
+  </nav>
+
+  <div class="drawer" id="drawer">
+    <ul>
+      <li><a href="index.html"   onclick="closeDrawer()">About</a></li>
+      <li><a href="skills.html"  onclick="closeDrawer()">Skills</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="projects.html" onclick="closeDrawer()">Projects</a></li>
+      <li><a href="reel.html"    onclick="closeDrawer()">Reel</a></li>
+      <li><a href="contact.html" onclick="closeDrawer()">Hire Me</a></li>
+    </ul>
+  </div>
+
+  <div class="page">
+    <section class="hero">
+      <div class="hero-left fade-in">
+        <p class="tag">Multimedia Artist &nbsp;·&nbsp; PC Assembly and Maintenance &nbsp;·&nbsp; BnS Business</p>
+        <h1>Hi, I'm<br><em>Kashmir.</em></h1>
+        <p class="bio">I specialize in digital storytelling through video production while providing technical support for custom PC builds and maintenance.</p>
+        <div class="hero-btns">
+          <a href="contact.html" class="btn solid">Get In Touch</a>
+          <a href="reel.html" class="btn outline">Watch My Reel</a>
+        </div>
+      </div>
+      <div class="hero-right fade-in" style="transition-delay:0.2s;">
+        <div class="photo-box">
+          <img src="c:\Users\store\OneDrive\Documents\Portfolio_WS\personphoto.jpg" alt="Kashmir" onerror="this.style.display='none'">
+          <span class="photo-label">your photo here</span>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span>© 2026 Kashmir</span>
+    </footer>
+  </div>
+  
+  <div class="page">
+    
+    <div class="page-header fade-in">
+      <p class="section-tag">Get To Know Me</p>
+      <h2>About <em>Me</em></h2>
+    </div>
+
+    <div class="about-body">
+      
+      <div class="about-intro fade-in" style="margin-bottom: var(--space-xl, 48px);">
+        <p style="font-family: var(--sans); font-size: 1.15rem; line-height: 1.7; color: var(--ink); max-width: 680px;">
+          I am a student currently taking my studies at <strong>Pamantasan ng Lungsod ng Valenzuela</strong>. 
+          Known for being fundamentally <strong>soft-spoken</strong>, I bring a calm, focused, and deliberate approach 
+          to both my creative design choices and technical code execution.
+        </p>
+      </div>
+
+      <div class="about-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px;">
+        
+        <div class="about-col fade-in">
+          <h3 style="font-family: var(--serif); font-size: 1.5rem; color: var(--accent); margin-bottom: 20px; font-style: italic;">Education</h3>
+          
+          <div class="edu-item" style="margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid var(--border);">
+            <span style="font-family: var(--mono); font-size: 11px; color: var(--muted); letter-spacing: 1px; display: block; margin-bottom: 4px;">2016 — 2022</span>
+            <h4 style="font-family: var(--sans); font-size: 1rem; margin: 0 0 4px 0; color: var(--ink);"> Secondary Education</h4>
+            <p style="font-family: var(--sans); font-size: 13px; margin: 0; color: var(--muted);"> Maysan National High School</p>
+            <p style="font-family: var(--sans); font-size: 11px; margin: 2px 0 0 0; color: var(--muted); opacity: 0.8;"> Maysan, Valenzuela City</p>
+          </div>
+
+          <div class="edu-item">
+            <span style="font-family: var(--mono); font-size: 11px; color: var(--muted); letter-spacing: 1px; display: block; margin-bottom: 4px;">2009 — 2015</span>
+            <h4 style="font-family: var(--sans); font-size: 1rem; margin: 0 0 4px 0; color: var(--ink);">Primary Education</h4>
+            <p style="font-family: var(--sans); font-size: 13px; margin: 0; color: var(--muted);">FSS Patulo Elementary School</p>
+            <p style="font-family: var(--sans); font-size: 11px; margin: 2px 0 0 0; color: var(--muted); opacity: 0.8;">Marilao, Bulacan</p>
+          </div>
+        </div>
+
+        <div class="about-col fade-in">
+          <h3 style="font-family: var(--serif); font-size: 1.5rem; color: var(--accent); margin-bottom: 20px; font-style: italic;">Hobbies & Lifestyle</h3>
+          <p style="font-family: var(--sans); font-size: 14px; color: var(--muted); margin-bottom: 20px; line-height: 1.6;">
+            When I am stepped away from the screen and design workspace, you can usually find me spending my hours balancing physical training with digital recreation:
+          </p>
+          
+          <ul class="hobbies-list" style="list-style: none; padding: 0; margin: 0; font-family: var(--mono); font-size: 13px; display: flex; flex-direction: column; gap: 10px;">
+            <li style="display: flex; align-items: center; gap: 10px; color: var(--ink);"><span style="color: var(--accent);">💻</span> Vibe Coding</li>
+            <li style="display: flex; align-items: center; gap: 10px; color: var(--ink);"><span style="color: var(--accent);">🏸</span> Badminton</li>
+            <li style="display: flex; align-items: center; gap: 10px; color: var(--ink);"><span style="color: var(--accent);">🚴</span> Cycling</li>
+            <li style="display: flex; align-items: center; gap: 10px; color: var(--ink);"><span style="color: var(--accent);">🏊</span> Swimming</li>
+            <li style="display: flex; align-items: center; gap: 10px; color: var(--ink);"><span style="color: var(--accent);">🎮</span> Online Games</li>
+            <li style="display: flex; align-items: center; gap: 10px; color: var(--ink);"><span style="color: var(--accent);">🍿</span> Netflix and Chill</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <footer class="footer" style="margin-top: 80px;">
+      <span>© 2026 Kashmir</span>
+    </footer>
+  </div>
+
+ <script>
+    // Hamburger
+    const burger = document.getElementById('burger');
+    const drawer = document.getElementById('drawer');
+    burger.addEventListener('click', () => drawer.classList.toggle('open'));
+    function closeDrawer() { drawer.classList.remove('open'); }
+
+    // Fade-in on load
+    document.querySelectorAll('.fade-in').forEach((el, i) => {
+      setTimeout(() => el.classList.add('visible'), 100 + i * 150);
+    });
+  </script>
+</body>
+</html>

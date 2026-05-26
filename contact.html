@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kashmir — Contact</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/jpg" href="favicon.jpg">
+  <style>
+    .cv-section {
+      margin-top: 48px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .cv-preview {
+      margin-top: 12px;
+      width: 260px;
+      border: 1px solid var(--border, #e0e0e0);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      background: #fafafa;
+      aspect-ratio: 8.5 / 11;
+      display: flex;
+      align-items: stretch;
+    }
+    .cv-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .cv-placeholder {
+      display: none;
+      width: 100%;
+      height: 100%;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      color: var(--muted, #999);
+      font-family: var(--mono, monospace);
+      font-size: 13px;
+      text-align: center;
+      padding: 24px;
+    }
+    .cv-icon { font-size: 40px; }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">KP</a>
+    <ul class="nav-links">
+      <li><a href="index.html">About</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="reel.html">Reel</a></li>
+      <li><a href="contact.html" class="nav-cta active">Hire Me</a></li>
+    </ul>
+    <button class="burger" id="burger">&#9776;</button>
+  </nav>
+
+  <div class="drawer" id="drawer">
+    <ul>
+      <li><a href="index.html"   onclick="closeDrawer()">About</a></li>
+      <li><a href="skills.html"  onclick="closeDrawer()">Skills</a></li>
+      <li><a href="projects.html" onclick="closeDrawer()">Projects</a></li>
+      <li><a href="reel.html"    onclick="closeDrawer()">Reel</a></li>
+      <li><a href="contact.html" onclick="closeDrawer()">Hire Me</a></li>
+    </ul>
+  </div>
+
+  <div class="page">
+    <div class="contact-body">
+      <p class="section-tag fade-in">Let's Talk</p>
+      <h2 class="fade-in">Ready to build<br><em>something great?</em></h2>
+      <p class="bio fade-in">Open for freelance projects, creative collaborations, and custom PC builds. Feel free to reach out anytime.</p>
+
+      <div class="fade-in">
+        <a href="mailto:kashmirevan23@gmail.com?subject=Hiring%20Inquiry&body=Hi%20Kashmir%2C%20I%27d%20like%20to%20work%20with%20you!" class="btn solid">Send a Message</a>
+      </div>
+
+      <div class="socials fade-in">
+        <a href="https://www.instagram.com/amiryu_0/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://web.facebook.com/kashmir.evan.paraiso" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.youtube.com/@amiryu_uu" target="_blank" rel="noopener">YouTube</a>
+      </div>
+
+      <!-- CV Section -->
+      <div class="cv-section fade-in">
+        <p class="section-tag" style="margin-top: 0;">My CV</p>
+        <div class="cv-preview">
+          <img src="Kashmir_cv.png" alt="Kashmir CV Preview" class="cv-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+          <div class="cv-placeholder">
+            <span class="cv-icon">📄</span>
+            <span>CV Preview</span>
+            <span style="font-size:12px; opacity:0.5;">Add Kashmir_cv.png to your folder</span>
+          </div>
+        </div>
+        <a href="Kashmir_CV.docx" download class="btn outline" style="margin-top: 20px; display: inline-block;">Download CV</a>
+      </div>
+
+    </div>
+
+    <footer class="footer">
+      <span>© 2026 Kashmir</span>
+    </footer>
+  </div>
+
+  <script>
+    const burger = document.getElementById('burger');
+    const drawer = document.getElementById('drawer');
+    burger.addEventListener('click', () => drawer.classList.toggle('open'));
+    function closeDrawer() { drawer.classList.remove('open'); }
+
+    document.querySelectorAll('.fade-in').forEach((el, i) => {
+      setTimeout(() => el.classList.add('visible'), 80 + i * 130);
+    });
+  </script>
+</body>
+</html>
